@@ -13,7 +13,7 @@ The main tool for this turbidity monitoring system is installed in the chemical 
 •	Query2 : $data2 = mysqli_query($koneksi, "select suhu from tbl_suhu_realtime where ntu>=0 order by waktu desc limit 20");
 •	Query3 : $data3 = 'select (select count(*) from tbl_suhu) as count, (select count (*) from tbl_suhu where ntu>=120)  as counts,(select count(*) from tbl_suhu where status=0)  as counta ';
 •	Query4 : $data4 = mysqli_query($koneksi, "select  waktu from tbl_suhu order by waktu desc limit 24");
-
+```
 
 
 
