@@ -5,10 +5,10 @@ This is the final project to complete study at Bogor Agricultural Institute, thi
 
 The main tool for this turbidity monitoring system is installed in the chemical laboratory of PDAM Tirta Bhagasasi Rawa Lumbu branch, turbidity sensor is installed in IPA 40 (Water Treatment Installation) with a capacity of 40 liters / second by using a 30 meter long UTP (Unshielded Twisted Pair) UTP (Unshielded Twisted Pair) cable for data transmission, and computers in the IT room (Information Technology) Rawa Lumbu which is used as a server computer for web turbidity. The transmission of data on the main device to the server computer using wireless media so that it can facilitate the admin in monitoring
 
-![Project2](http://1.bp.blogspot.com/-nOOxmj9xfgw/XhTBPLoK-JI/AAAAAAAAADw/wouHOkQKAIk77sAO-54Txe2COGLyyqLUQCK4BGAYYCw/s1600/Screen%2BShot%2B2020-01-07%2Bat%2B21.54.49.png)
+![Project2](http://3.bp.blogspot.com/-H5E0OlKVGJc/XhSmUzjBeoI/AAAAAAAAAC4/euJr8mOVs2U0f9VBwbDc42TeyM-FKXVLQCK4BGAYYCw/s1600/Picture1d.png)
 
 
-Spesifikasi 
+```Spesifikasi 
 •	Query1 : $data1 = mysqli_query($koneksi, "select suhu from tbl_suhu_realtime  where ntu>=0 order by waktu desc limit 1");
 •	Query2 : $data2 = mysqli_query($koneksi, "select suhu from tbl_suhu_realtime where ntu>=0 order by waktu desc limit 20");
 •	Query3 : $data3 = 'select (select count(*) from tbl_suhu) as count, (select count (*) from tbl_suhu where ntu>=120)  as counts,(select count(*) from tbl_suhu where status=0)  as counta ';
