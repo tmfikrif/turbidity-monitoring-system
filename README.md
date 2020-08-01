@@ -24,6 +24,29 @@ This command is used to send input data from sensors in analog form that has bee
 lcd.print(celcius);
   client.println("GET /pdam/include/insertsuhu.php?celcius="+(String(celcius))+ "&adc="+ (String (z))+ "&status="+ (String (keterangan)));
 ```
+integration with ethernet
+```
+byte mac[] ={ 0xDE,0xAD,0xBE,0xEF,0xFE,0xED};
+char server [] = "192.168.1.11";
+IPAddress ip (192,168,1,99); 
+```
+
+code to read analog values on the sensor
+```
+void Data_NTU (){ 
+
+  for(i=0;i<1;i++) {
+
+ suhu.requestTemperatures(); 
+ celcius=suhu.getTempCByIndex(0);
+ 
+  ADC_NTU[i] = analogRead(A0);              
+  ADC_NTU[i] >= z; {
+  z = ADC_NTU[i];  
+      } 
+    }
+```
+
 You can find the value of accuracy with this formula
 ```
 Δx =  Xa - Xb
@@ -36,6 +59,4 @@ You can find the value of accuracy with this formula
 = 0.992 ×100%
 = 99.20 %
 ```
-
-
-Developer: T.M Fikri Febriansyah
+#Developer: T.M Fikri Febriansyah
