@@ -7,6 +7,7 @@ The main tool for this turbidity monitoring system is installed in the chemical 
 
 ![Project2](http://3.bp.blogspot.com/-H5E0OlKVGJc/XhSmUzjBeoI/AAAAAAAAAC4/euJr8mOVs2U0f9VBwbDc42TeyM-FKXVLQCK4BGAYYCw/s1600/Picture1d.png)
 
+
 Temperature graph page with layout_7 identity functions to display information in the form of graphs and temperature tables in realtime. This page has no input interactions so it can only be used as an output for temperature monitoring. The process flow on the temperature graph page is the admin can access the page then the system will display data in the form of graphs and tables.
 
 to capture graph monitoring data in realtime using the following queries
@@ -18,15 +19,23 @@ to capture graph monitoring data in realtime using the following queries
 •$data4 = mysqli_query($koneksi, "select  waktu from tbl_suhu order by waktu desc limit 24");
 ```
 
-
-
+This command is used to send input data from sensors in analog form that has been converted with a Kalman filter. the results of the conversion are stored and transmitted in digital data with stable accuracy
+```
+lcd.print(celcius);
+  client.println("GET /pdam/include/insertsuhu.php?celcius="+(String(celcius))+ "&adc="+ (String (z))+ "&status="+ (String (keterangan)));
+```
+You can find the value of accuracy with this formula
+```
 Δx =  Xa - Xb
 = 26.20 – 25-99
 = 0.21
 
-Ketepatan  = (1-(∆x/Xa))×100%
+(1-(∆x/Xa))×100%
 = (1-(0.21/26.20))×100%
 = (1 – 0.008) ×100%
 = 0.992 ×100%
 = 99.20 %
+```
 
+
+Developer: T.M Fikri Febriansyah
