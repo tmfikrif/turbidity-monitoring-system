@@ -7,8 +7,11 @@ The main tool for this turbidity monitoring system is installed in the chemical 
 
 ![Project2](http://3.bp.blogspot.com/-H5E0OlKVGJc/XhSmUzjBeoI/AAAAAAAAAC4/euJr8mOVs2U0f9VBwbDc42TeyM-FKXVLQCK4BGAYYCw/s1600/Picture1d.png)
 
+Temperature graph page with layout_7 identity functions to display information in the form of graphs and temperature tables in realtime. This page has no input interactions so it can only be used as an output for temperature monitoring. The process flow on the temperature graph page is the admin can access the page then the system will display data in the form of graphs and tables.
 
-```Spesifikasi 
+to capture graph monitoring data in realtime using the following queries
+```
+
 •	Query1 : $data1 = mysqli_query($koneksi, "select suhu from tbl_suhu_realtime  where ntu>=0 order by waktu desc limit 1");
 •	Query2 : $data2 = mysqli_query($koneksi, "select suhu from tbl_suhu_realtime where ntu>=0 order by waktu desc limit 20");
 •	Query3 : $data3 = 'select (select count(*) from tbl_suhu) as count, (select count (*) from tbl_suhu where ntu>=120)  as counts,(select count(*) from tbl_suhu where status=0)  as counta ';
