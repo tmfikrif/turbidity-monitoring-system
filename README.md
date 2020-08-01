@@ -12,10 +12,10 @@ Temperature graph page with layout_7 identity functions to display information i
 to capture graph monitoring data in realtime using the following queries
 ```
 
-•	Query1 : $data1 = mysqli_query($koneksi, "select suhu from tbl_suhu_realtime  where ntu>=0 order by waktu desc limit 1");
-•	Query2 : $data2 = mysqli_query($koneksi, "select suhu from tbl_suhu_realtime where ntu>=0 order by waktu desc limit 20");
-•	Query3 : $data3 = 'select (select count(*) from tbl_suhu) as count, (select count (*) from tbl_suhu where ntu>=120)  as counts,(select count(*) from tbl_suhu where status=0)  as counta ';
-•	Query4 : $data4 = mysqli_query($koneksi, "select  waktu from tbl_suhu order by waktu desc limit 24");
+•$data1 = mysqli_query($koneksi, "select suhu from tbl_suhu_realtime  where ntu>=0 order by waktu desc limit 1");
+•$data2 = mysqli_query($koneksi, "select suhu from tbl_suhu_realtime where ntu>=0 order by waktu desc limit 20");
+•$data3 = 'select (select count(*) from tbl_suhu) as count, (select count (*) from tbl_suhu where ntu>=120)  as counts,(select count(*) from tbl_suhu where status=0)  as counta ';
+•$data4 = mysqli_query($koneksi, "select  waktu from tbl_suhu order by waktu desc limit 24");
 ```
 
 
